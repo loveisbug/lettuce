@@ -13,6 +13,14 @@ study notes.
 
 ## Vulnerability
 
+## Python
+
+## .NET Framework
+* [应用程序启动过程](https://github.com/loveisbug/lettuce/blob/master/wiki/dotnet/dotnet_app_startup.md)
+
+## Building System
+* [cmake](https://github.com/loveisbug/lettuce/blob/master/wiki/building/cmake_notes.md)
+
 ## Testing
 ### MonkeyRunner
 * [MonkeyRunner能做什么]()

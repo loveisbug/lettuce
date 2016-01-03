@@ -1,0 +1,2 @@
+# lettuce
+study notes.

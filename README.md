@@ -1,5 +1,4 @@
 # lettuce
-study notes.
 
 ## Android System
 ### JNI
@@ -9,6 +8,9 @@ study notes.
 ### Device Driver
 * [葡萄游戏大厅研究]()
 * [拦截用户外设输入模拟input event]()
+
+### Framework
+* [VNC server](https://github.com/loveisbug/lettuce/blob/master/wiki/android/framework/vnc_server_notes.md)
 
 
 ## Vulnerability

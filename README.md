@@ -4,6 +4,7 @@
 ### JNI
 * [JNI笔记](https://github.com/loveisbug/lettuce/blob/master/wiki/android/jni/jni_notes.md)
 * [AIDA64分析](https://github.com/loveisbug/lettuce/blob/master/wiki/android/jni/aida64.md)
+* [ARM处理器架构](https://github.com/loveisbug/lettuce/blob/master/wiki/android/jni/arm_arch.md)
 
 ### Device Driver
 * [葡萄游戏大厅研究]()

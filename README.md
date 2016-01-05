@@ -6,8 +6,10 @@
 * [AIDA64分析](https://github.com/loveisbug/lettuce/blob/master/wiki/android/jni/aida64.md)
 * [ARM处理器架构](https://github.com/loveisbug/lettuce/blob/master/wiki/android/jni/arm_arch.md)
 
+### Reverse
+* [葡萄游戏大厅分析](https://github.com/loveisbug/lettuce/blob/master/wiki/android/reverse/putaogame.md)
+
 ### Device Driver
-* [葡萄游戏大厅研究]()
 * [拦截用户外设输入模拟input event]()
 
 ### Framework

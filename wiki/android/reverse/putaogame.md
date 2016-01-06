@@ -26,7 +26,7 @@
   * motion
   * sensor
   * touch
-* [反编译学习]()
+* [反编译学习](https://github.com/loveisbug/lettuce/blob/master/wiki/android/reverse/decompile_android_notes.md)
 
 #### C/C++/C#部分
 
@@ -70,7 +70,7 @@ N/A|`libplog.so`|葡萄SDK ptsdk lib
 * 分析`libplog.so`
   * 依赖`libstdc++.so`, `libm.so`, `libc.so`, `libdl.so`
   * 指令集 ARMv5TE, Little endian
-* [IDA Pro使用笔记]()
+* [IDA Pro使用笔记](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/idaq_notes.md)
 
 ##### `.dll`
 

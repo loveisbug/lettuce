@@ -18,6 +18,8 @@
 
 ## Vulnerability
 
+* [总是记不住](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/badmemory.md)
+
 ## Python
 
 ## .NET Framework

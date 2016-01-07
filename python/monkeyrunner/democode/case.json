@@ -1,0 +1,11 @@
+{
+  "app" : "com.shafa.market\/com.shafa.market.ShafaHomeAct",
+  "dev" : [
+    "610510042405"
+  ],
+  "case" : [
+    "runCase1",
+    "runCase2",
+    "runCase3"
+  ]
+}

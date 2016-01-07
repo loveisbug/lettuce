@@ -1,0 +1,40 @@
+{
+	"name":"ShafaMarket",
+	"lt":[0, 0],
+	"rb":[1920, 1080],
+	"touch":["touch", 0, 0],
+	"sub":[
+		{
+			"name":"toolbox", 
+			"lt":[1117, 114],
+			"rb":[1234, 167],
+			"touch":["touch", 1175, 140],
+			"sub":[
+				{
+					"name":"memclear",
+					"lt":[],
+					"rb":[],
+					"touch":["touch", 0, 0],
+					"sub":[]
+				},
+				{
+					"name":"setting",
+					"lt":[797, 594],
+					"rb":[1124, 954],
+					"touch":["touch", 959, 774],
+					"sub":[
+						{"name":"account", "lt":[794, 114], "rb":[1394, 219], "touch":["touch", 0, 0], "sub":[
+							{"name":"username","lt":[385, 418],"rb":[898, 493],"touch":["type", 0, 0],"sub":[]},
+							{"name":"password","lt":[385, 523],"rb":[898, 598],"touch":["type", 0, 0],"sub":[]},
+							{"name":"login","lt":[385, 628],"rb":[655, 703],"touch":["touch", 0, 0],"sub":[]}]},
+						{"name":"autodl", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0],"sub":[]},
+						{"name":"autodel", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]},
+						{"name":"updatehint", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]},
+						{"name":"widget", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]},
+						{"name":"phoneremote", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]},
+						{"name":"versionupdate", "lt":[794, 924], "rb":[1394, 1029], "touch":["touch", 1094, 940], "sub":[]},
+						{"name":"language", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]},
+						{"name":"root", "lt":[0, 0], "rb":[0, 0], "touch":["touch", 0, 0], "sub":[]}]
+				}]
+		}]
+}

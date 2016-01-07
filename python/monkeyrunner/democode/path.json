@@ -1,0 +1,37 @@
+{
+  "name" : "test case",
+  "array" : [
+    {
+      "name" : "runCase1",
+      "alias" : "update check",
+      "path" : [
+        "ShafaMarket",
+        "toolbox",
+        "setting",
+        "versionupdate"
+      ]
+    },
+    {
+      "name" : "runCase2",
+      "alias" : "update hint",
+      "path" : [
+        "ShafaMarket",
+        "toolbox",
+        "setting",
+        "updatehint"
+      ]
+    },
+    {
+      "name" : "runCase3",
+      "alias" : "login",
+      "path" : [
+        "ShafaMarket",
+        "toolbox",
+        "setting",
+        "account",
+        "username",
+        "password"
+      ]
+    }
+  ]
+}

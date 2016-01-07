@@ -66,5 +66,5 @@
 
 #### 坑
 
-* [无法`import json`]()
-* [截图比较]()
+* [无法`import json`](https://github.com/loveisbug/lettuce/blob/master/wiki/testing/mr_json.md)
+* [截图比较](https://github.com/loveisbug/lettuce/blob/master/wiki/testing/mr_image.md)

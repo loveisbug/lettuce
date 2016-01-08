@@ -11,6 +11,7 @@
 
 ### Device Driver
 * [拦截用户外设输入模拟input event]()
+* [输入设备](https://github.com/loveisbug/lettuce/blob/master/wiki/android/uinput/input_device.md)
 
 ### Framework
 * [VNC server](https://github.com/loveisbug/lettuce/blob/master/wiki/android/framework/vnc_server_notes.md)

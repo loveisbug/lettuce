@@ -79,4 +79,4 @@
 
 ### Linux设备驱动
 
-* [笔记]()
+* [笔记](https://github.com/loveisbug/lettuce/blob/master/wiki/android/uinput/linux_device_driver.md)

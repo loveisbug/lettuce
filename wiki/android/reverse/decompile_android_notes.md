@@ -1,6 +1,6 @@
 ### Decompile
 
-* `apktool`处理`AndroidManifest.xml`、资源文件和[`smali`](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/smali_spec.md)文件。
+* `apktool`处理`AndroidManifest.xml`、资源文件和[`smali`](https://github.com/loveisbug/lettuce/blob/master/wiki/android/reverse/smali_spec.md)文件。
 * [`dex2jar` + `JD-GUI`](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/badmemory.md#dex2jar--jd-gui)获得`jar`。
 
 ### Recompile

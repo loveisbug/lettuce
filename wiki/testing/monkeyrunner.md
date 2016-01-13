@@ -18,7 +18,7 @@
   * 需确认root后是否可以使用Hierarchy Viewer，OK后再确认`EasyMonkeyDevice`和`By`是否可以用。
   * 可以用`MonkeyRecorder`来录制测试用例（主要是用来记录点击操作的坐标值）。如下，
   
-        from com.android.monkeyrunner.recorder import MonkeyRecorder as recorder
+        from com.android.monkeyrunner.recorder import MonkeyRecorder as recorder  
         recorder.start(dev_conn)
 
   * 除了Hierarchy Viewer不可用之外，我们的应用布局方法没有给每个位置的控件一个唯一的id。可以用`MonkeyRecorder`来辅助建立控件位置库，也可以用Android Tools `monitor`来分析每一个view里的控件坐标范围。尝试下来，`monitor`比较好用。

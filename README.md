@@ -10,7 +10,7 @@
 * [葡萄游戏大厅分析](https://github.com/loveisbug/lettuce/blob/master/wiki/android/reverse/putaogame.md)
 
 ### Device Driver
-* [拦截用户外设输入模拟input event]()
+* [拦截用户外设输入模拟input event](https://github.com/loveisbug/lettuce/blob/master/wiki/android/uinput/input_event.md)
 * [输入设备](https://github.com/loveisbug/lettuce/blob/master/wiki/android/uinput/input_device.md)
 
 ### Framework

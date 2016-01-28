@@ -18,6 +18,7 @@
 
 
 ## Vulnerability
+* [Root](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/root/yunos.md)
 * [密码学入门](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/cryptology_notes.md)
 * [总是记不住](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/badmemory.md)
 

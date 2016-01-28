@@ -18,8 +18,8 @@
 
 
 ## Vulnerability
-* [Root](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/root/yunos.md)
-* [安全Info](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/info.md)
+* [Root](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/root/root.md)
+* [Security Information](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/info.md)
 * [密码学入门](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/cryptology_notes.md)
 * [总是记不住](https://github.com/loveisbug/lettuce/blob/master/wiki/vulnerability/reverse/badmemory.md)
 

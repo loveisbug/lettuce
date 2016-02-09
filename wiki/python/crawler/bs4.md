@@ -23,7 +23,7 @@ need to get the text ` s.r.o., `.
 
         print next(soup.find('a').children)
         
-1. `.descendants` or `iter`
+1. `.descendants`
 
     `.contents`和`.children`都只考虑了直接children，`.descendants`迭代所有的children，递归输出。
 

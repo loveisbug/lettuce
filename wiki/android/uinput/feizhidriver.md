@@ -49,11 +49,11 @@ yunos|E5:DA:1D:1B:54:A9:F8:FD:17:85:58:2C:15:FB:46:E3|Owner: EMAILADDRESS=tangro
   * `com.xiaoyt.red.cfg`
   * `install-recovery.sh`
   
-        /system/bin/motionelf_server&
+            /system/bin/motionelf_server&
         
   * `test_b.sh`
   
-        mount -o remount rw /system;/data/local/tmp/busybox cp /data/local/tmp/su /system/bin/.sux;chmod 6755 /system/bin/.sux;
+            mount -o remount rw /system;/data/local/tmp/busybox cp /data/local/tmp/su /system/bin/.sux;chmod 6755 /system/bin/.sux;
         
   * `libevent.so`
   * `libevent2.so`
@@ -234,58 +234,58 @@ yunos|E5:DA:1D:1B:54:A9:F8:FD:17:85:58:2C:15:FB:46:E3|Owner: EMAILADDRESS=tangro
 * 3层apk的包名和所请求的权限如下。
   * 飞智游戏大厅`feizhiyouxidatin.3987.com.apk`，包名`com.game.motionelf`
   
-        uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
-        uses-permission: android.permission.INTERNET
-        uses-permission: android.permission.ACCESS_NETWORK_STATE
-        uses-permission: android.permission.ACCESS_WIFI_STATE
-        uses-permission: android.permission.ACCESS_COARSE_LOCATION
-        uses-permission: android.permission.WAKE_LOCK
-        uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
-        uses-permission: android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-        uses-permission: android.permission.READ_EXTERNAL_STORAGE
-        uses-permission: android.permission.RESTART_PACKAGES
-        uses-permission: android.permission.GET_TASKS
-        uses-permission: android.permission.DELETE_PACKAGES
-        uses-permission: android.permission.WRITE_SETTINGS
-        uses-permission: android.permission.ACCESS_WIFI_STATE
-        uses-permission: android.permission.INSTALL_PACKAGES
+            uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
+            uses-permission: android.permission.INTERNET
+            uses-permission: android.permission.ACCESS_NETWORK_STATE
+            uses-permission: android.permission.ACCESS_WIFI_STATE
+            uses-permission: android.permission.ACCESS_COARSE_LOCATION
+            uses-permission: android.permission.WAKE_LOCK
+            uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
+            uses-permission: android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+            uses-permission: android.permission.READ_EXTERNAL_STORAGE
+            uses-permission: android.permission.RESTART_PACKAGES
+            uses-permission: android.permission.GET_TASKS
+            uses-permission: android.permission.DELETE_PACKAGES
+            uses-permission: android.permission.WRITE_SETTINGS
+            uses-permission: android.permission.ACCESS_WIFI_STATE
+            uses-permission: android.permission.INSTALL_PACKAGES
         
   * 飞智手柄助手`com.android.motionelf.apk`，包名`com.android.motionelf`
   
-        uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
-        uses-permission: android.permission.INTERNET
-        uses-permission: android.permission.ACCESS_NETWORK_STATE
-        uses-permission: android.permission.ACCESS_WIFI_STATE
-        uses-permission: android.permission.ACCESS_COARSE_LOCATION
-        uses-permission: android.permission.WAKE_LOCK
-        uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
-        uses-permission: android.permission.RESTART_PACKAGES
-        uses-permission: android.permission.SYSTEM_ALERT_WINDOW
-        uses-permission: android.permission.INJECT_EVENTS
-        uses-permission: android.permission.GET_TASKS
-        uses-permission: android.permission.READ_FRAME_BUFFER
-        uses-permission: android.permission.DELETE_PACKAGES
-        uses-permission: android.permission.WRITE_SETTINGS
-        uses-permission: android.permission.WRITE_SECURE_SETTINGS
-        uses-permission: android.permission.RECEIVE_BOOT_COMPLETED
-        uses-permission: android.hardware.usb.host
-        uses-permission: android.permission.INSTALL_PACKAGES
+            uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
+            uses-permission: android.permission.INTERNET
+            uses-permission: android.permission.ACCESS_NETWORK_STATE
+            uses-permission: android.permission.ACCESS_WIFI_STATE
+            uses-permission: android.permission.ACCESS_COARSE_LOCATION
+            uses-permission: android.permission.WAKE_LOCK
+            uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
+            uses-permission: android.permission.RESTART_PACKAGES
+            uses-permission: android.permission.SYSTEM_ALERT_WINDOW
+            uses-permission: android.permission.INJECT_EVENTS
+            uses-permission: android.permission.GET_TASKS
+            uses-permission: android.permission.READ_FRAME_BUFFER
+            uses-permission: android.permission.DELETE_PACKAGES
+            uses-permission: android.permission.WRITE_SETTINGS
+            uses-permission: android.permission.WRITE_SECURE_SETTINGS
+            uses-permission: android.permission.RECEIVE_BOOT_COMPLETED
+            uses-permission: android.hardware.usb.host
+            uses-permission: android.permission.INSTALL_PACKAGES
         
   * 飞智手柄助手驱动`com.android.motionelfdriver_mi.apk`，driver系列apk们的包名都是`com.android.motionelfdriver`
   
-        uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
-        uses-permission: android.permission.INTERNET
-        uses-permission: android.permission.ACCESS_NETWORK_STATE
-        uses-permission: android.permission.ACCESS_WIFI_STATE
-        uses-permission: android.permission.ACCESS_COARSE_LOCATION
-        uses-permission: android.permission.WAKE_LOCK
-        uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
-        uses-permission: android.permission.RESTART_PACKAGES
-        uses-permission: android.permission.SYSTEM_ALERT_WINDOW
-        uses-permission: android.permission.GET_TASKS
-        uses-permission: android.permission.WRITE_SETTINGS
-        uses-permission: android.permission.RECEIVE_BOOT_COMPLETED
-        uses-permission: android.hardware.usb.host
+            uses-permission: android.permission.ACCESS_DOWNLOAD_MANAGER
+            uses-permission: android.permission.INTERNET
+            uses-permission: android.permission.ACCESS_NETWORK_STATE
+            uses-permission: android.permission.ACCESS_WIFI_STATE
+            uses-permission: android.permission.ACCESS_COARSE_LOCATION
+            uses-permission: android.permission.WAKE_LOCK
+            uses-permission: android.permission.WRITE_EXTERNAL_STORAGE
+            uses-permission: android.permission.RESTART_PACKAGES
+            uses-permission: android.permission.SYSTEM_ALERT_WINDOW
+            uses-permission: android.permission.GET_TASKS
+            uses-permission: android.permission.WRITE_SETTINGS
+            uses-permission: android.permission.RECEIVE_BOOT_COMPLETED
+            uses-permission: android.hardware.usb.host
 
 ### 线程
 

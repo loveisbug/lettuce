@@ -149,62 +149,62 @@ N/A|`libplog.so`|葡萄SDK ptsdk lib
     * 想通过·apktool b -c·来[“Copies original AndroidManifest.xml and META-INF folder into built apk.”](https://code.google.com/p/android-apktool/wiki/ApktoolOptions)，还是躲不掉重新签名。
   * 在`com.putaolab.ptsdk.activity.PTMainActivity.smali`中增加如下代码，build、签名后运行。
 
-        # interfaces
-        .implements Lcom/blablaname/tv/controller/sdk/interceptor/IInputEventListener;
+            # interfaces
+            .implements Lcom/blablaname/tv/controller/sdk/interceptor/IInputEventListener;
 
-        # instance fields
-        .field private mInputInterceptor:Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
+            # instance fields
+            .field private mInputInterceptor:Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
 
-        ...
+            ...
 
-        .method protected onCreate(Landroid/os/Bundle;)V
-            .locals 3
-            .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+            .method protected onCreate(Landroid/os/Bundle;)V
+                .locals 3
+                .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
-            .prologue
-            invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+                .prologue
+                invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-            const-string v1, "ERICTAG"
-            const-string v2, "In PTMainActivity, onCreate(), Test Begin*****"
-            invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+                const-string v1, "ERICTAG"
+                const-string v2, "In PTMainActivity, onCreate(), Test Begin*****"
+                invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-            new-instance v0, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
+                new-instance v0, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
 
-            invoke-direct {v0, p0, p0}, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;-><init>(Landroid/content/Context;Lcom/blablaname/tv/controller/sdk/interceptor/IInputEventListener;)V
+                invoke-direct {v0, p0, p0}, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;-><init>(Landroid/content/Context;Lcom/blablaname/tv/controller/sdk/interceptor/IInputEventListener;)V
 
-            iput-object v0, p0, Lcom/putaolab/ptsdk/activity/PTMainActivity;->mInputInterceptor:Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
+                iput-object v0, p0, Lcom/putaolab/ptsdk/activity/PTMainActivity;->mInputInterceptor:Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;
 
-            const/4 v1, 0x0
-            invoke-virtual {p0, v1}, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;->setMode(I)V    
+                const/4 v1, 0x0
+                invoke-virtual {p0, v1}, Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;->setMode(I)V    
 
-            const-string v1, "ERICTAG"
-            const-string v2, "In PTMainActivity, onCreate(), Test End*******"
-            invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+                const-string v1, "ERICTAG"
+                const-string v2, "In PTMainActivity, onCreate(), Test End*******"
+                invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-            return-void
-        .end method
+                return-void
+            .end method
 
-        .method public onSdkGenericMotionEvent(Landroid/view/MotionEvent;)Z
-            .locals 1
-            .param p1, "event"    # Landroid/view/MotionEvent;
-            return v0
-        .end method
+            .method public onSdkGenericMotionEvent(Landroid/view/MotionEvent;)Z
+                .locals 1
+                .param p1, "event"    # Landroid/view/MotionEvent;
+                return v0
+            .end method
 
-        .method public onSdkKeyEvent(Landroid/view/KeyEvent;)Z
-            .locals 1
-            .param p1, "event"    # Landroid/view/KeyEvent;
-            return v0
-        .end method
+            .method public onSdkKeyEvent(Landroid/view/KeyEvent;)Z
+                .locals 1
+                .param p1, "event"    # Landroid/view/KeyEvent;
+                return v0
+            .end method
 
-        .method public onSdkTouchEvent(Landroid/view/MotionEvent;)Z
-            .locals 1
-            .param p1, "event"    # Landroid/view/MotionEvent;
-            return v0
-        .end method
+            .method public onSdkTouchEvent(Landroid/view/MotionEvent;)Z
+                .locals 1
+                .param p1, "event"    # Landroid/view/MotionEvent;
+                return v0
+            .end method
 
   * 报错如下，
   
-        W/dalvikvm(4700): VFY: 'this' arg 'Lcom/putaolab/ptsdk/activity/PTMainActivity;' not instance of 'Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;'
+            W/dalvikvm(4700): VFY: 'this' arg 'Lcom/putaolab/ptsdk/activity/PTMainActivity;' not instance of 'Lcom/blablaname/tv/controller/sdk/interceptor/InputInterceptor;'
 
 ### 启动大厅时抓包分析
 

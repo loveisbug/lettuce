@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import urllib
 import urllib2
 import string
@@ -6,7 +8,7 @@ from bs4 import BeautifulSoup
 import re
 
 
-def fetch_item(id):
+def fetch_item(id, output):
 	urlrequest = urllib2.Request('http://www.lifevc.com/item/' + id)
 	html_src = urllib2.urlopen(urlrequest).read()
 	parser = BeautifulSoup(html_src, "html.parser")
@@ -21,7 +23,7 @@ def fetch_item(id):
 
 	print iname, iid, iprice, imprice
 
-def fetch_channel(url):
+def fetch_channel(url, output):
 	urlrequest = urllib2.Request(url)
 	html_src = urllib2.urlopen(urlrequest).read()
 	parser = BeautifulSoup(html_src, "html.parser")
@@ -29,14 +31,36 @@ def fetch_channel(url):
 	for channel in channels:
 		print channel.text.strip(), channel['href']
 
-def fetch_slogan(url):
+def fetch_slogan(url, output):
+	subdict = {}
 	urlrequest = urllib2.Request(url)
 	html_src = urllib2.urlopen(urlrequest).read()
 	parser = BeautifulSoup(html_src, "html.parser")
-	slogans = parser.findAll('h3')
-	for slogan in slogans:
-		print slogan.text
+	itemlist = parser.find('ul', 'FeaturedItemList').findAll('li', '')
+	for item in itemlist:
+		name = item.findNext('a')['title']
+		uid =  re.search(r'\d+', item.findNext('a')['href']).group()
+		churl = item.find('a', 'linkCat')['href']
+		ch = churl[churl.rfind('/') + 1 : ].split('-')[0]
+		subch = churl[churl.rfind('/') + 1 : ].split('-')[1]
+		price = item.find('b', 'countPrice').text
+		slogan = item.find('h3').text
+		comment = re.search(r'\d+', item.find('span', 'recentSale').text.strip()).group()
+		if not uid in output:
+			subdict['name'] = name
+			subdict['channel'] = ch
+			subdict['subchannel'] = subch
+			subdict['slogan'] = slogan
+			subdict['price'] = price
+			subdict['comment'] = comment
+			output[uid] = subdict
 
-# fetch_item('19735')
-# fetch_channel('http://www.lifevc.com')
-fetch_slogan('http://www.lifevc.com')
+def main():
+	vdict = {}
+	# fetch_item('19735')
+	# fetch_channel('http://www.lifevc.com')
+	fetch_slogan('http://www.lifevc.com/Exh/Topic/SelectedNProducts', vdict)
+	print len(vdict)
+
+if __name__ == '__main__':
+	main()

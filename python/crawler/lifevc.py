@@ -6,6 +6,7 @@ import string
 import HTMLParser
 from bs4 import BeautifulSoup
 import re
+import xlwt
 
 
 def fetch_item(id, output):
@@ -32,7 +33,6 @@ def fetch_channel(url, output):
 		print channel.text.strip(), channel['href']
 
 def fetch_slogan(url, output):
-	subdict = {}
 	urlrequest = urllib2.Request(url)
 	html_src = urllib2.urlopen(urlrequest).read()
 	parser = BeautifulSoup(html_src, "html.parser")
@@ -47,6 +47,7 @@ def fetch_slogan(url, output):
 		slogan = item.find('h3').text
 		comment = re.search(r'\d+', item.find('span', 'recentSale').text.strip()).group()
 		if not uid in output:
+			subdict = {}
 			subdict['name'] = name
 			subdict['channel'] = ch
 			subdict['subchannel'] = subch
@@ -57,10 +58,23 @@ def fetch_slogan(url, output):
 
 def main():
 	vdict = {}
+	wb = xlwt.Workbook()
+	ws = wb.add_sheet('LifeVC Products')
 	# fetch_item('19735')
 	# fetch_channel('http://www.lifevc.com')
 	fetch_slogan('http://www.lifevc.com/Exh/Topic/SelectedNProducts', vdict)
+	i = 1
+	for key in vdict:
+		ws.write(i, 0, key)
+		ws.write(i, 1, vdict[key]['name'])
+		ws.write(i, 2, vdict[key]['slogan'])
+		ws.write(i, 3, vdict[key]['price'])
+		ws.write(i, 4, vdict[key]['channel'])
+		ws.write(i, 5, vdict[key]['subchannel'])
+		ws.write(i, 6, vdict[key]['comment'])
+		i += 1
 	print len(vdict)
+	wb.save('livevc.xls')
 
 if __name__ == '__main__':
 	main()

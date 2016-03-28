@@ -7,6 +7,8 @@ import HTMLParser
 from bs4 import BeautifulSoup
 import re
 import xlwt
+import json
+from tqdm import tqdm
 
 
 def fetch_item(id, output):
@@ -56,13 +58,34 @@ def fetch_slogan(url, output):
 			subdict['comment'] = comment
 			output[uid] = subdict
 
+def fetch_app_api(url, output):
+	chlist = [2859, 2860, 2861, 2862, 2863, 2864, 2865, 2866]
+	for ch in tqdm(chlist):
+		jData = json.loads(urllib2.urlopen(urllib2.Request(url + str(ch))).read())
+		cats = jData['InnerData']['Categories']
+		for cat in cats:
+			for item in cat['Items']:
+				uid = item['ItemInfoId']
+				if not uid in output:
+					subdict = {}
+					subdict['name'] = item['Name']
+					subdict['channel'] = ch
+					subdict['category'] = cat['Title'] + '-' + str(cat['ItemIndexId'])
+					subdict['slogan'] = item['Appeal']
+					subdict['price'] = item['SalePrice']
+					subdict['comment'] = item['CommentCount']
+					output[uid] = subdict
+
 def main():
 	vdict = {}
 	wb = xlwt.Workbook()
 	ws = wb.add_sheet('LifeVC Products')
+
 	# fetch_item('19735')
 	# fetch_channel('http://www.lifevc.com')
-	fetch_slogan('http://www.lifevc.com/Exh/Topic/SelectedNProducts', vdict)
+	# fetch_slogan('http://www.lifevc.com/Exh/Topic/SelectedNProducts', vdict)
+	fetch_app_api('http://app.lifevc.com/1.0/v_ios_4.0.1_28/categories/Category?itemindexid=', vdict)
+
 	i = 1
 	for key in vdict:
 		ws.write(i, 0, key)
@@ -70,7 +93,7 @@ def main():
 		ws.write(i, 2, vdict[key]['slogan'])
 		ws.write(i, 3, vdict[key]['price'])
 		ws.write(i, 4, vdict[key]['channel'])
-		ws.write(i, 5, vdict[key]['subchannel'])
+		ws.write(i, 5, vdict[key]['category'])
 		ws.write(i, 6, vdict[key]['comment'])
 		i += 1
 	print len(vdict)

@@ -18,15 +18,18 @@
   * 需确认root后是否可以使用Hierarchy Viewer，OK后再确认`EasyMonkeyDevice`和`By`是否可以用。
   * 可以用`MonkeyRecorder`来录制测试用例（主要是用来记录点击操作的坐标值）。如下，
   
-        from com.android.monkeyrunner.recorder import MonkeyRecorder as recorder  
-        recorder.start(dev_conn)
+```python
+from com.android.monkeyrunner.recorder import MonkeyRecorder as recorder  
+recorder.start(dev_conn)
+```
 
   * 除了Hierarchy Viewer不可用之外，我们的应用布局方法没有给每个位置的控件一个唯一的id。可以用`MonkeyRecorder`来辅助建立控件位置库，也可以用Android Tools `monitor`来分析每一个view里的控件坐标范围。尝试下来，`monitor`比较好用。
     * 不同分辨率盒子的不同坐标用配置文件，`json` or `xml`？
-    
-            displayX = (x - minX) * displayWidth / (maxX - minX + 1)
-            displayY = (y - minY) * displayHeight / (maxY - minY + 1)
 
+```python    
+displayX = (x - minX) * displayWidth / (maxX - minX + 1)
+displayY = (y - minY) * displayHeight / (maxY - minY + 1)
+```
     * Python脚本读取不同配置文件，给控件对象初始化坐标值，建立每个控件的安全可TOUCH坐标点，
     * 针对每个测试用例，建立从`startActivity`之后的抵达路径，
     * 每个测试用例执行完成后，怎么回到一个初始状态以便于下一个用例的开始执行（抵达路径合理）？
@@ -36,12 +39,14 @@
       * [控件](https://github.com/loveisbug/lettuce/blob/master/python/monkeyrunner/democode/mi2.json)
       * [路径](https://github.com/loveisbug/lettuce/blob/master/python/monkeyrunner/democode/path.json)
       * Python解析`json`
-      
-            import json
-            f = file('test.json')
-            s = json.load(f)
-            # 's' is 'dict', s['sub'] is 'list'.
-            f.close()
+
+```python      
+import json
+f = file('test.json')
+s = json.load(f)
+# 's' is 'dict', s['sub'] is 'list'.
+f.close()
+```
       * 解析控件json文件建立控件列表，解析路径json文件建立测试用例路径列表。
       * 选择需要执行的测试用例，从用例路径列表中得到其控件列表，再从控件列表中获取每个控件的坐标。
     * 有[`ViewClient`](https://github.com/dtmilano/AndroidViewClient)插件可以用来获取控件文本，可以尝试，

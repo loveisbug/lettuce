@@ -58,7 +58,10 @@ def fetch_slogan(url, output):
 			subdict['comment'] = comment
 			output[uid] = subdict
 
-def fetch_app_api(url, output):
+def fetch_item_by_api(url, output):
+	pass
+
+def fetch_cat_by_api(url, output):
 	chlist = [2859, 2860, 2861, 2862, 2863, 2864, 2865, 2866]
 	for ch in tqdm(chlist):
 		jData = json.loads(urllib2.urlopen(urllib2.Request(url + str(ch))).read())
@@ -84,7 +87,7 @@ def main():
 	# fetch_item('19735')
 	# fetch_channel('http://www.lifevc.com')
 	# fetch_slogan('http://www.lifevc.com/Exh/Topic/SelectedNProducts', vdict)
-	fetch_app_api('http://app.lifevc.com/1.0/v_ios_4.0.1_28/categories/Category?itemindexid=', vdict)
+	fetch_cat_by_api('http://app.lifevc.com/1.0/v_ios_4.0.1_28/categories/Category?itemindexid=', vdict)
 
 	i = 1
 	for key in vdict:

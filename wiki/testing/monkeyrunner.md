@@ -24,7 +24,6 @@
 ```
   * 除了Hierarchy Viewer不可用之外，我们的应用布局方法没有给每个位置的控件一个唯一的id。可以用`MonkeyRecorder`来辅助建立控件位置库，也可以用Android Tools `monitor`来分析每一个view里的控件坐标范围。尝试下来，`monitor`比较好用。
     * 不同分辨率盒子的不同坐标用配置文件，`json` or `xml`？
-
 ```python
     displayX = (x - minX) * displayWidth / (maxX - minX + 1)
     displayY = (y - minY) * displayHeight / (maxY - minY + 1)
@@ -37,8 +36,7 @@
     * `json`格式的坐标配置文件，每个子项目由`name`、`lt`、`rb`、`touchpoint`、`sub`组成，`touchpoint`是自动计算还是建库时填入？
       * [控件](https://github.com/loveisbug/lettuce/blob/master/python/monkeyrunner/democode/mi2.json)
       * [路径](https://github.com/loveisbug/lettuce/blob/master/python/monkeyrunner/democode/path.json)
-      * Python解析`json`。
-
+      * Python解析`json`？
 ```python
     import json
     f = file('test.json')

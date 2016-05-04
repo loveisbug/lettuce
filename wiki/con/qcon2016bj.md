@@ -8,8 +8,8 @@
 ###前端
 ####“打造HTML5游戏引擎开发工具之路” - 青瓷引擎
 * 2D/3D引擎
-  * [http://www.pixijs.com/](pixi.js)，超快、开源HTML5、JavaScript 2D渲染引擎，使用带有Canvas回调功能的WebGL。
-  * [http://www.babylonjs.com/](babylon.js)，基于WebGL、HTML5和JavaScript的开源3D游戏引擎。
+  * [pixi.js](http://www.pixijs.com/)，超快、开源HTML5、JavaScript 2D渲染引擎，使用带有Canvas回调功能的WebGL。
+  * [babylon.js](http://www.babylonjs.com/)，基于WebGL、HTML5和JavaScript的开源3D游戏引擎。
 * WebGL
   * 2013，Android默认的WebView核与Android Chrome不一样，独立的Chrome 28的核开启不了WebGL。
   * Mobile Browsers: HTML5 Compatibility
@@ -39,7 +39,7 @@
     * Limit batch size, and balance mobile and desktop
     * Getters and setters call overhead is still significant on mobile
     * Is WebGL rendering always faster then Canvas?
-    * 性能标准[http://asmjs.org/](asm.js)
+    * 性能标准[asm.js](http://asmjs.org/)
 
 ###架构
 ####“前后端分离中API接口与数据Mock的思考与应用” - 美团大众

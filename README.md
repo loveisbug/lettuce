@@ -35,3 +35,6 @@
 ## Testing
 ### MonkeyRunner
 * [MonkeyRunner能做什么](https://github.com/loveisbug/lettuce/blob/master/wiki/testing/monkeyrunner.md)
+
+## Conference
+* [2016 QCon 北京](https://github.com/loveisbug/lettuce/blob/master/wiki/con/qcon2016bj.md)

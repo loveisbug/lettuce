@@ -41,6 +41,9 @@
     * Is WebGL rendering always faster then Canvas?
     * 性能标准[asm.js](http://asmjs.org/)
 
+####“ReactMix HTML+CSS+JS写React Native” - 携程
+* [ReactMix](https://github.com/xueduany/react-mix)在React Native和ReactJs的基础上，全新架构一层Framework和自动化翻译工具，通过相应的翻译机制和扩展模式，将现有的浏览器中可执行的HTML页面、JS代码和CSS样式，同步翻译成为React Native可以执行的代码。
+
 ###架构
 ####“前后端分离中API接口与数据Mock的思考与应用” - 美团大众
 * 前端都需要mock
@@ -53,3 +56,4 @@
   * 开源，多种用例语言，跨移动平台，Native/Hybrid/Web
 * 在线兼容性测试
   * [阿里MQC](http://mqc.aliyun.com/)，[云测](http://www.testin.cn/)，[百度MTC](http://mtc.baidu.com/)
+

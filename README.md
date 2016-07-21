@@ -26,6 +26,9 @@
 ## Python
 * [crawler](https://github.com/loveisbug/lettuce/blob/master/wiki/python/crawler/crawler.md)
 
+## PHP
+* [工具](https://github.com/loveisbug/lettuce/blob/master/wiki/php/tools.md)
+
 ## .NET Framework
 * [应用程序启动过程](https://github.com/loveisbug/lettuce/blob/master/wiki/dotnet/dotnet_app_startup.md)
 

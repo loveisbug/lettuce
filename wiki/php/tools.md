@@ -15,6 +15,18 @@ phpize
 ```
 报错没安装```autoconf```，用```brew install autoconf```来安装。
 
+```
+brew install autoconf
+phpize
+./configure --enable-xdebug
+make
+```
+然后```make test```测试一下。
+
+```
+make install
+```
+
 ## 管理工具
 [PECL](https://pecl.php.net/)
 

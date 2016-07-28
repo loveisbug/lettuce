@@ -27,7 +27,70 @@ make
 make install
 ```
 
-## 管理工具
+报错
+
+```
+Installing shared extensions:     /usr/lib/php/extensions/no-debug-non-zts-20121212/
+cp: /usr/lib/php/extensions/no-debug-non-zts-20121212/#INST@98930#: Operation not permitted
+```
+[解决方案](http://www.cnblogs.com/yoainet/p/5088171.html)
+
+修改```php.ini```文件，
+
+```
+[PHP_Xdebug]
+zend_extension_ts="FULL PATH TO php_xdebug file"
+```
+
+```
+xdebug.profiler_enable = 1
+xdebug.profiler_enable_trigger = 1
+xdebug.profiler_output_dir="ABSOLUTE PATH TO XDEBUG LOGS DIRECTORY"
+xdebug.profiler_append=On
+xdebug.profiler_output_name = "cachegrind"
+```
+
+### GUI工具
+
+- [WinCacheGrind](http://sourceforge.net/projects/wincachegrind)
+- [KDECacheGrind](http://kcachegrind.sourceforge.net/html/Download.html)
+
+  ```
+ ./configure
+ make
+ make install
+  ```
+
+## Alternative PHP Cache(APC)
+
+用```PECL```来安装。
+
+```
+sudo pecl install apc
+```
+如果遇到如下报错，可以按照bata版，或者从源代码生成。
+
+```
+'/tmp/pear/temp/APC/php_apc.c:959: error: duplicate 'static'
+make: *** [php_apc.lo] Error 1
+ERROR: `make' failed'
+```
+```
+sudo pecl install apc-beta
+```
+
+修改```php.ini```
+
+```
+extension=apc.so
+apc.enabled=1
+apc.stat=1
+```
+
+## XCache
+## eAsccelerator
+
+## 工具
 [PECL](https://pecl.php.net/)
 
 [brew](http://brew.sh/index_zh-cn.html)

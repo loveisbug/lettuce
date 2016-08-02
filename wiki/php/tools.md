@@ -87,9 +87,62 @@ apc.enabled=1
 apc.stat=1
 ```
 
-## XCache
-## eAsccelerator
+安装apc自带管理工具，浏览器访问```http://YOUR_HOST/apc.php```。
 
+## [XCache](http://xcache.lighthttpd.net)
+安装
+
+```
+sudo apt-get install php5-xcache
+```
+```
+yum install xcache
+```
+
+## [eAsccelerator](www.eaccelerator.net)
+安装
+
+```
+sudo apt-get install php5-eaccelerator
+```
+```
+yum install php-eacceleartor
+```
+下载安装
+
+```
+wget http://bart.eaccelerator.net/source/0.9.6.1/eacceleartor-0.9.6.1.tar.bz2
+tar xvjf eaccelerator-0.9.6.1.tar.bz2
+```
+```
+phpize
+./configure
+make
+sudo make install
+```
+
+缓存文件夹
+
+```eA```默认缓存目录是```/tmp/eaccelerator```，建议更改此位置并从```/tmp```中删除，因为该目录会在每次系统重新启动时被清空。推荐在```/var/```中创建目录，完整的目录位置可以是```/var/cache/eaccelerator```。
+
+修改```php.ini```文件
+
+```
+extension="eaccelerator.so"
+eaccelerator.shm_size="16"
+eaccelerator.cache_dir="/var/cache/eaccelerator"
+eaccelerator.enable="1"
+eaccelerator.optimizer="1"
+eaccelerator.check_mtime="1"
+eaccelerator.debug="0"
+eaccelerator.filter=""
+eaccelerator.shm_max="0"
+eaccelerator.shm_ttl="0"
+eaccelerator.shm_prune_period="0"
+eaccelerator.shm_only="0"
+eaccelerator.compress="1"
+eaccelerator.compress_level="9"
+```
 ## 工具
 [PECL](https://pecl.php.net/)
 
